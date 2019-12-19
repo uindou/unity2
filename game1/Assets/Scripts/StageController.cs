@@ -17,13 +17,16 @@ public class StageController : MonoBehaviour
     void Update()
     {
         Quaternion defaultRot = transform.rotation;
-        transform.rotation *= Quaternion.AngleAxis(ArrowButtom.lr * Time.deltaTime * angle, new Vector3(0, 0, 1));
-        transform.rotation *= Quaternion.AngleAxis(ArrowButtom.pd * Time.deltaTime * angle, new Vector3(1, 0, 0));
+        transform.rotation *= Quaternion.AngleAxis(ArrowButton.lr * Time.deltaTime * angle, new Vector3(0, 0, 1));
+        transform.rotation *= Quaternion.AngleAxis(ArrowButton.pd * Time.deltaTime * angle, new Vector3(1, 0, 0));
+        /*
         if (Mathf.Abs(transform.rotation.ToEuler().z) > zAngleLimit * Mathf.PI / 180 || Mathf.Abs(transform.rotation.ToEuler().x) > xAngleLimit * Mathf.PI / 180)
         {
             transform.rotation = defaultRot;
         }
+        */
     }
+
 
 
 }
